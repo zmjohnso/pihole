@@ -11,10 +11,10 @@ You should use a Raspberry Pi 3 and 4 should work. I have tested this setup on a
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html). The easiest way (especially on Pi or a Debian system) is via Pip:
      1. (If on Pi/Debian): `sudo apt-get install -y python3-pip`
      2. (Everywhere): `pip3 install ansible`
-  2. Clone this repository: `git clone https://github.com/geerlingguy/internet-pi.git`, then enter the repository directory: `cd internet-pi`.
+  2. Clone this repository: `git clone https://github.com/zmjohnso/pihole.git`, then enter the repository directory: `cd pihole`.
   3. Install requirements: `ansible-galaxy collection install -r requirements.yml` (if you see `ansible-galaxy: command not found`, restart your SSH session or reboot the Pi and try again)
   4. Make copies of the following files and customize them to your liking:
-     - `example.inventory.ini` to `inventory.ini` (replace IP address with your Pi's IP, or comment that line and uncomment the `connection=local` line if you're running it on the Pi you're setting up).
+     - `example.inventory.ini` to `inventory.ini` (replace IP address with your Pi's IP
      - `example.config.yml` to `config.yml`
   5. Run the playbook: `ansible-playbook main.yml`
 
